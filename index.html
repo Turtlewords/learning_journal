@@ -9,17 +9,17 @@
 </head>
 <body>
     <!-- Mobile Header -->
-    <header class="mobile__header">
+    <header class="mobile__header lg:hidden">
       <div class="header__title--container">
-        <img class="header__img" src="images/comment-dots-solid-full.svg" alt="logo">
+        <img class="header__img icon" src="images/comment-dots-solid-full.svg" alt="logo">
         <h1 class="header__title">learning journal</h1>
       </div>
-      <img class="hamburger" src="images/hamburger.svg" alt="hamburger menu">
+      <img class="hamburger icon" src="images/hamburger.svg" alt="hamburger menu">
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile__menu">
-        <img src="images/close.svg" alt="close menu icon">
+    <div class="mobile__menu bg-blue-300 translate-full">
+        <img class="close-menu icon" src="images/close.svg" alt="close menu icon">
         <nav class="mobile__nav">
             <ul class="mobile-nav__list">
           <li><a href="">HOME</a></li>
@@ -30,7 +30,7 @@
 
 
     <!-- Desktop Header -->
-     <header class="desktop__header hidden">
+     <header class="desktop__header hidden lg:flex">
       <div class="header__title--container">
         <img class="header__img" src="images/comment-dots-solid-full.svg" alt="logo">
         <h1 class="header__title">learning journal</h1>
@@ -42,5 +42,27 @@
         </ul>
       </nav>
     </header>
+
+    <!-- Main -->
+     <main class="main">
+        <section class="main-article bg-[url(/images/desktop.jpg)] bg-cover p-12 bg-blend-lighten">
+            <div class="main-article__text text-white">
+                <time datetime="11-21-2025">Nov 21, 2025</time>
+                <h2 class="main-article__title">Staring at my computer</h2>
+                <p class="main-article__copy">Every day is another and that's the way it goes. Every day is another and that's the way it goes. Every day is another and that's the way it goes. Every day is another and that's the way it goes. Every day is another and that's the way it goes.</p>
+            </div>
+        </section>
+     </main>
+
+     <!-- Articles -->
+
+     <aside class="articles">
+
+     </aside>
+
+     <!-- Footer -->
+      <footer class="footer">
+
+      </footer>
 </body>
 </html>

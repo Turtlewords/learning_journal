@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.icon {
+    width: 50px;
+}
