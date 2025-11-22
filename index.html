@@ -9,10 +9,10 @@
 </head>
 <body>
     <!-- Mobile Header -->
-    <header class="mobile__header lg:hidden">
-      <div class="header__title--container">
+    <header class="mobile__header lg:hidden flex justify-between items-center p-2">
+      <div class="header__title--container flex gap-1 items-center">
         <img class="header__img icon" src="images/comment-dots-solid-full.svg" alt="logo">
-        <h1 class="header__title">learning journal</h1>
+        <h1 class="header__title text-xl font-bold">my learning journal</h1>
       </div>
       <img class="hamburger icon" src="images/hamburger.svg" alt="hamburger menu">
     </header>
@@ -45,7 +45,7 @@
 
     <!-- Main -->
      <main class="main">
-        <section class="main-article bg-[url(/images/desktop.jpg)] bg-cover p-12 bg-blend-lighten">
+        <section class="main-article bg-gray-600 bg-[url(/images/desktop.jpg)] bg-cover p-12 bg-blend-darken">
             <div class="main-article__text text-white">
                 <time datetime="11-21-2025">Nov 21, 2025</time>
                 <h2 class="main-article__title">Staring at my computer</h2>
