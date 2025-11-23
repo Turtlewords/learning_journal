@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link href="./src/output.css" rel="stylesheet">
 </head>
-<body class="relative">
+<body class="relative flex flex-col items-center">
     <!-- Mobile Header -->
     <header class="mobile__header lg:hidden flex justify-between items-center p-2">
       <div class="header__title--container flex gap-1 items-center">
@@ -30,13 +30,13 @@
 
 
     <!-- Desktop Header -->
-     <header class="desktop__header hidden lg:flex">
-      <div class="header__title--container">
-        <img class="header__img" src="images/comment-dots-solid-full.svg" alt="logo">
-        <h1 class="header__title">learning journal</h1>
+     <header class="desktop__header max-lg:hidden flex w-9/10 justify-between p-4">
+      <div class="header__title--container flex gap-1 items-center">
+        <img class="header__img icon" src="images/comment-dots-solid-full.svg" alt="logo">
+        <h1 class="header__title text-xl font-bold">my learning journal</h1>
       </div>
-      <nav class="desktop__nav">
-        <ul class="desktop-nav__list">
+      <nav class="desktop__nav flex items-center">
+        <ul class="desktop-nav__list flex gap-6 items-center">
           <li><a href="/index.html">HOME</a></li>
           <li><a href="/about_me.html">ABOUT ME</a></li>
         </ul>
@@ -56,10 +56,10 @@
 
      <!-- Articles -->
 
-     <aside class="articles flex flex-col items-center gap-y-6 p-6">
+     <aside class="articles flex flex-col items-center gap-y-6 p-6 ">
        
       <!-- Blog 1 -->
-       <article class="blog-one blog">
+       <article class="blog">
         <img class="blog-img" src="images/apples.jpg" alt="apples">
         <div class="blog-text-container">
           <time datetime="07-23-2025">July 23, 2025</time>
@@ -69,7 +69,7 @@
        </article>
 
        <!-- Blog 2 -->
-      <article class="blog-two blog">
+      <article class="blog">
         <img class="blog-img" src="images/bananas.jpg" alt="bananas">
         <div class="blog-text-container">
           <time datetime="07-18-2025">July 18, 2025</time>
@@ -79,7 +79,7 @@
       </article>
 
        <!-- Blog 3 -->
-      <article class="blog-three blog">
+      <article class="blog">
         <img class="blog-img" src="images/blueberries.jpg" alt="blueberries">
         <div class="blog-text-container">
           <time datetime="07-23-2025">July 23, 2025</time>
@@ -88,11 +88,43 @@
         </div>
       </article>
 
+      <!-- Desktop Expanded Blog Cards -->
+
+      <!-- Blog 4 -->
+       <article class="blog">
+        <img class="blog-img" src="images/durian.jpg" alt="durian">
+        <div class="blog-text-container">
+          <time datetime="06-23-2025">June 23, 2025</time>
+          <h3 class="blog-title">Blog four</h3>
+          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde.</p>
+       </div>
+       </article>
+
+       <!-- Blog 5 -->
+      <article class="blog">
+        <img class="blog-img" src="images/grapes.jpg" alt="grapes">
+        <div class="blog-text-container">
+          <time datetime="06-11-2025">June 11, 2025</time>
+          <h3 class="blog-title">Blog five</h3>
+          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde.</p>
+        </div>
+      </article>
+
+       <!-- Blog 6 -->
+      <article class="blog">
+        <img class="blog-img" src="images/oranges.jpg" alt="oranges">
+        <div class="blog-text-container">
+          <time datetime="05-15-2025">May 15, 2025</time>
+          <h3 class="blog-title">Blog six</h3>
+          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde.</p>
+        </div>
+      </article>
+
 
      </aside>
 
      <!-- Footer -->
-      <footer class="footer bg-gray-700 p-8 text-center">
+      <footer class="footer bg-gray-700 p-8 text-center w-full">
           <p class="footer-title text-white font-bold">my learning journal</p>
           <p class="copyright text-white">Copyright &copy; 2025</p>
       </footer>
