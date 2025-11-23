@@ -7,9 +7,9 @@
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link href="./src/output.css" rel="stylesheet">
 </head>
-<body class="relative">
+<body class="relative flex flex-col items-center">
     <!-- Mobile Header -->
-    <header class="mobile__header lg:hidden flex justify-between items-center p-2">
+    <header class="mobile__header lg:hidden flex justify-between items-center p-2 w-full">
       <div class="header__title--container flex gap-1 items-center">
         <img class="header__img icon" src="images/comment-dots-solid-full.svg" alt="logo">
         <a href="/index.html"><h1 class="header__title text-xl font-bold">my learning journal</h1></a>
@@ -43,12 +43,15 @@
       </nav>
     </header>
 
-    <!-- Main -->
+    <div class="container flex flex-col items-center max-w-6xl">
+        <!-- Main -->
      <main class="about-me flex flex-col gap-10 items-center py-12 px-6">
-        <section class="about-me__hero flex flex-col gap-4">
+        <section class="about-me__hero flex flex-col lg:flex-row lg:gap-8 lg:items-center gap-4">
             <img class="w-40 rounded-full mb-4" src="/images/portrait.jpg" alt="portrait of henderson">
-            <h2 class="text-3xl font-bold">Hello there! My name is Henderson and welcome to my learning journal.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nostrum nobis vitae voluptatem nesciunt facere eum mollitia eos aliquam recusandae libero assumenda sed accusantium, laudantium dicta vero quae a reiciendis!</p>
+            <div class="about-me__hero-text">
+                <h2 class="text-3xl font-bold">Hello there! My name is Henderson and welcome to my learning journal.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nostrum nobis vitae voluptatem nesciunt facere eum mollitia eos aliquam recusandae libero assumenda sed accusantium, laudantium dicta vero quae a reiciendis!</p>
+            </div>
         </section>
         <section class="about-me__content flex flex-col gap-4">
             <h3 class="font-bold">How I stayed true to the stuff</h3>
@@ -96,6 +99,9 @@
 
 
      </aside>
+    </div>
+
+    
 
      <!-- Footer -->
       <footer class="footer bg-gray-700 p-8 text-center">
