@@ -18,13 +18,13 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile__menu bg-blue-300 translate-full absolute h-screen w-full z-1">
+    <div class="mobile__menu bg-white flex flex-col gap-3 p-2 items-end translate-full absolute h-screen w-full inset-0 z-2 transition duration-300">
         <img class="close-menu icon" src="images/close.svg" alt="close menu icon">
         <nav class="mobile__nav">
-            <ul class="mobile-nav__list">
-          <li><a href="">HOME</a></li>
-          <li><a href="">ABOUT ME</a></li>
-        </ul>
+            <ul class="mobile-nav__list flex flex-col items-end gap-2 p-2">
+              <li><a href="">HOME</a></li>
+              <li><a href="">ABOUT ME</a></li>
+            </ul>
         </nav>
     </div>
 
@@ -56,7 +56,7 @@
 
      <!-- Articles -->
 
-     <aside class="articles flex flex-col items-center gap-y-8 p-6">
+     <aside class="articles flex flex-col items-center gap-y-6 p-6">
        
       <!-- Blog 1 -->
        <article class="blog-one blog">
@@ -64,7 +64,7 @@
         <div class="blog-text-container">
           <time datetime="07-23-2025">July 23, 2025</time>
           <h3 class="blog-title">Blog one</h3>
-          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde. Nobis accusantium veniam culpa nulla!</p>
+          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde.</p>
        </div>
        </article>
 
@@ -74,7 +74,7 @@
         <div class="blog-text-container">
           <time datetime="07-18-2025">July 18, 2025</time>
           <h3 class="blog-title">Blog two</h3>
-          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde. Nobis accusantium veniam culpa nulla!</p>
+          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde.</p>
         </div>
       </article>
 
@@ -84,7 +84,7 @@
         <div class="blog-text-container">
           <time datetime="07-23-2025">July 23, 2025</time>
           <h3 class="blog-title">Blog one</h3>
-          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde. Nobis accusantium veniam culpa nulla!</p>
+          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde.</p>
         </div>
       </article>
 
@@ -92,9 +92,23 @@
      </aside>
 
      <!-- Footer -->
-      <footer class="footer">
-          <p class="footer-title">my learning journal</p>
-          <p class="copyright">Copyright &copy; 2025</p>
+      <footer class="footer bg-gray-700 p-8 text-center">
+          <p class="footer-title text-white font-bold">my learning journal</p>
+          <p class="copyright text-white">Copyright &copy; 2025</p>
       </footer>
+      <script>
+        const hamburger = document.querySelector(".hamburger");
+        const closeMenu = document.querySelector(".close-menu");
+        const mobileMenu = document.querySelector(".mobile__menu");
+
+        hamburger.addEventListener("click", () => {
+          mobileMenu.classList.remove("translate-full")
+        })
+
+        closeMenu.addEventListener("click", () => {
+          mobileMenu.classList.add("translate-full")
+        })
+
+      </script>
 </body>
 </html>
