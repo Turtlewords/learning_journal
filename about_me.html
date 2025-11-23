@@ -12,7 +12,7 @@
     <header class="mobile__header lg:hidden flex justify-between items-center p-2">
       <div class="header__title--container flex gap-1 items-center">
         <img class="header__img icon" src="images/comment-dots-solid-full.svg" alt="logo">
-        <h1 class="header__title text-xl font-bold">my learning journal</h1>
+        <a href="/index.html"><h1 class="header__title text-xl font-bold">my learning journal</h1></a>
       </div>
       <img class="hamburger icon" src="images/hamburger.svg" alt="hamburger menu">
     </header>
@@ -33,7 +33,7 @@
      <header class="desktop__header hidden lg:flex">
       <div class="header__title--container">
         <img class="header__img" src="images/comment-dots-solid-full.svg" alt="logo">
-        <h1 class="header__title">learning journal</h1>
+        <a href="/index.html"><h1 class="header__title">learning journal</h1></a>
       </div>
       <nav class="desktop__nav">
         <ul class="desktop-nav__list">
@@ -44,17 +44,23 @@
     </header>
 
     <!-- Main -->
-     <main class="main">
-        <section class="main-article bg-gray-600 bg-[url(/images/desktop.jpg)] bg-cover px-4 pb-6 pt-24 bg-blend-darken">
-            <div class="main-article__text text-white">
-                <time datetime="11-21-2025">Nov 21, 2025</time>
-                <a href="/main_article.html"><h2 class="main-article__title text-3xl font-bold">Staring at my computer</h2></a>
-                <p class="main-article__copy">Every day is another and that's the way it goes. Every day is another and that's the way it goes. Every day is another and that's the way it goes. Every day is another and that's the way it goes. Every day is another and that's the way it goes.</p>
-            </div>
+     <main class="about-me flex flex-col gap-10 items-center py-12 px-6">
+        <section class="about-me__hero flex flex-col gap-4">
+            <img class="w-40 rounded-full mb-4" src="/images/portrait.jpg" alt="portrait of henderson">
+            <h2 class="text-3xl font-bold">Hello there! My name is Henderson and welcome to my learning journal.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nostrum nobis vitae voluptatem nesciunt facere eum mollitia eos aliquam recusandae libero assumenda sed accusantium, laudantium dicta vero quae a reiciendis!</p>
         </section>
+        <section class="about-me__content flex flex-col gap-4">
+            <h3 class="font-bold">How I stayed true to the stuff</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quibusdam tempora voluptate nobis odio laboriosam, vero dolores hic odit id quas asperiores animi distinctio harum adipisci sed ea sit unde!</p>
+            <h3 class="font-bold">Why I need the stuff to be there</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quibusdam tempora voluptate nobis odio laboriosam, vero dolores hic odit id quas asperiores animi distinctio harum adipisci sed ea sit unde!</p>
+        </section>
+        
      </main>
 
      <!-- Articles -->
+     <h2 class="recent-posts text-center font-bold">Recent posts</h2>
 
      <aside class="articles flex flex-col items-center gap-y-6 p-6">
        

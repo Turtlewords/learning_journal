@@ -36,3 +36,10 @@
 .blog-text {
     color: #171717;
 }
+
+
+/* Main Article */
+
+.article-subhead {
+    font-weight: 700;
+}
