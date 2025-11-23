@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link href="./src/output.css" rel="stylesheet">
 </head>
-<body>
+<body class="relative">
     <!-- Mobile Header -->
     <header class="mobile__header lg:hidden flex justify-between items-center p-2">
       <div class="header__title--container flex gap-1 items-center">
@@ -18,7 +18,7 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile__menu bg-blue-300 translate-full">
+    <div class="mobile__menu bg-blue-300 translate-full absolute h-screen w-full z-1">
         <img class="close-menu icon" src="images/close.svg" alt="close menu icon">
         <nav class="mobile__nav">
             <ul class="mobile-nav__list">
@@ -45,10 +45,10 @@
 
     <!-- Main -->
      <main class="main">
-        <section class="main-article bg-gray-600 bg-[url(/images/desktop.jpg)] bg-cover p-12 bg-blend-darken">
+        <section class="main-article bg-gray-600 bg-[url(/images/desktop.jpg)] bg-cover px-4 pb-4 pt-24 bg-blend-darken">
             <div class="main-article__text text-white">
                 <time datetime="11-21-2025">Nov 21, 2025</time>
-                <h2 class="main-article__title">Staring at my computer</h2>
+                <h2 class="main-article__title text-3xl font-bold">Staring at my computer</h2>
                 <p class="main-article__copy">Every day is another and that's the way it goes. Every day is another and that's the way it goes. Every day is another and that's the way it goes. Every day is another and that's the way it goes. Every day is another and that's the way it goes.</p>
             </div>
         </section>
@@ -56,13 +56,45 @@
 
      <!-- Articles -->
 
-     <aside class="articles">
+     <aside class="articles flex flex-col items-center gap-y-8 p-6">
+       
+      <!-- Blog 1 -->
+       <article class="blog-one blog">
+        <img class="blog-img" src="images/apples.jpg" alt="apples">
+        <div class="blog-text-container">
+          <time datetime="07-23-2025">July 23, 2025</time>
+          <h3 class="blog-title">Blog one</h3>
+          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde. Nobis accusantium veniam culpa nulla!</p>
+       </div>
+       </article>
+
+       <!-- Blog 2 -->
+      <article class="blog-two blog">
+        <img class="blog-img" src="images/bananas.jpg" alt="bananas">
+        <div class="blog-text-container">
+          <time datetime="07-18-2025">July 18, 2025</time>
+          <h3 class="blog-title">Blog two</h3>
+          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde. Nobis accusantium veniam culpa nulla!</p>
+        </div>
+      </article>
+
+       <!-- Blog 3 -->
+      <article class="blog-three blog">
+        <img class="blog-img" src="images/blueberries.jpg" alt="blueberries">
+        <div class="blog-text-container">
+          <time datetime="07-23-2025">July 23, 2025</time>
+          <h3 class="blog-title">Blog one</h3>
+          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde. Nobis accusantium veniam culpa nulla!</p>
+        </div>
+      </article>
+
 
      </aside>
 
      <!-- Footer -->
       <footer class="footer">
-
+          <p class="footer-title">my learning journal</p>
+          <p class="copyright">Copyright &copy; 2025</p>
       </footer>
 </body>
 </html>

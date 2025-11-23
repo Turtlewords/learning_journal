@@ -3,3 +3,21 @@
 .icon {
     width: 44px;
 }
+
+
+/* Blog cards */
+
+.blog {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    border-radius: 4px;
+    
+}
+
+.blog-img {
+   border-radius: 4px; 
+}
+
