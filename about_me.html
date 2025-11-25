@@ -30,13 +30,13 @@
 
 
     <!-- Desktop Header -->
-     <header class="desktop__header hidden lg:flex">
-      <div class="header__title--container">
-        <img class="header__img" src="images/comment-dots-solid-full.svg" alt="logo">
-        <a href="/index.html"><h1 class="header__title">learning journal</h1></a>
+      <header class="desktop__header max-lg:hidden flex w-9/10 justify-between p-4">
+      <div class="header__title--container flex gap-1 items-center">
+        <img class="header__img icon" src="images/comment-dots-solid-full.svg" alt="logo">
+        <a href="/index.html"><h1 class="header__title text-xl font-bold">my learning journal</h1></a>
       </div>
-      <nav class="desktop__nav">
-        <ul class="desktop-nav__list">
+      <nav class="desktop__nav flex items-center">
+        <ul class="desktop-nav__list flex gap-6 items-center">
           <li><a href="/index.html">HOME</a></li>
           <li><a href="/about_me.html">ABOUT ME</a></li>
         </ul>
@@ -65,7 +65,7 @@
      <!-- Articles -->
      <h2 class="recent-posts text-center font-bold">Recent posts</h2>
 
-     <aside class="articles flex flex-col items-center gap-y-6 p-6">
+     <aside class="articles flex flex-col items-center gap-y-6 p-6 lg:flex-row lg:gap-x-6">
        
       <!-- Blog 1 -->
        <article class="blog-one blog">
@@ -92,7 +92,7 @@
         <img class="blog-img" src="images/blueberries.jpg" alt="blueberries">
         <div class="blog-text-container">
           <time datetime="07-23-2025">July 23, 2025</time>
-          <h3 class="blog-title">Blog one</h3>
+          <h3 class="blog-title">Blog three</h3>
           <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde.</p>
         </div>
       </article>
@@ -104,7 +104,7 @@
     
 
      <!-- Footer -->
-      <footer class="footer bg-gray-700 p-8 text-center">
+      <footer class="footer bg-gray-700 p-8 text-center w-full">
           <p class="footer-title text-white font-bold">my learning journal</p>
           <p class="copyright text-white">Copyright &copy; 2025</p>
       </footer>

@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learning Journal</title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    <link href="./src/output.css" rel="stylesheet">
-</head>
-<body class="relative">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body class="relative flex flex-col items-center">
     <!-- Mobile Header -->
-    <header class="mobile__header lg:hidden flex justify-between items-center p-2">
+    <header
+      class="mobile__header lg:hidden flex justify-between items-center p-2 w-full"
+    >
       <div class="header__title--container flex gap-1 items-center">
-        <img class="header__img icon" src="images/comment-dots-solid-full.svg" alt="logo">
+        <img
+          class="header__img icon"
+          src="images/comment-dots-solid-full.svg"
+          alt="logo"
+        />
         <h1 class="header__title text-xl font-bold">my learning journal</h1>
       </div>
-      <img class="hamburger icon" src="images/hamburger.svg" alt="hamburger menu">
+      <img
+        class="hamburger icon"
+        src="images/hamburger.svg"
+        alt="hamburger menu"
+      />
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile__menu bg-white flex flex-col gap-3 p-2 items-end translate-full fixed h-screen w-full inset-0 z-2 transition duration-300">
-        <img class="close-menu icon" src="images/close.svg" alt="close menu icon">
-        <nav class="mobile__nav">
-            <ul class="mobile-nav__list flex flex-col items-end gap-2 p-2">
-              <li><a href="/index.html">HOME</a></li>
-              <li><a href="/about_me.html">ABOUT ME</a></li>
-            </ul>
-        </nav>
+    <div
+      class="mobile__menu bg-white flex flex-col gap-3 p-2 items-end translate-full fixed h-screen w-full inset-0 z-2 transition duration-300"
+    >
+      <img
+        class="close-menu icon"
+        src="images/close.svg"
+        alt="close menu icon"
+      />
+      <nav class="mobile__nav">
+        <ul class="mobile-nav__list flex flex-col items-end gap-2 p-2">
+          <li><a href="/index.html">HOME</a></li>
+          <li><a href="/about_me.html">ABOUT ME</a></li>
+        </ul>
+      </nav>
     </div>
 
-
     <!-- Desktop Header -->
-     <header class="desktop__header hidden lg:flex">
-      <div class="header__title--container">
-        <img class="header__img" src="images/comment-dots-solid-full.svg" alt="logo">
-        <h1 class="header__title">learning journal</h1>
+    <header
+      class="desktop__header max-lg:hidden flex w-9/10 justify-between p-4"
+    >
+      <div class="header__title--container flex gap-1 items-center">
+        <img
+          class="header__img icon"
+          src="images/comment-dots-solid-full.svg"
+          alt="logo"
+        />
+        <h1 class="header__title text-xl font-bold">my learning journal</h1>
       </div>
-      <nav class="desktop__nav">
-        <ul class="desktop-nav__list">
+      <nav class="desktop__nav flex items-center">
+        <ul class="desktop-nav__list flex gap-6 items-center">
           <li><a href="/index.html">HOME</a></li>
           <li><a href="/about_me.html">ABOUT ME</a></li>
         </ul>
@@ -44,71 +65,156 @@
     </header>
 
     <!-- Main -->
-     <main class="main">
-        <section class="main-article bg-gray-600 bg-[url(/images/desktop.jpg)] bg-cover px-4 pb-6 pt-24 bg-blend-darken">
-            <div class="main-article__text text-white">
-                <time datetime="11-21-2025">Nov 21, 2025</time>
-                <a href="/main_article.html"><h2 class="main-article__title text-3xl font-bold">Staring at my computer</h2></a>
-                <p class="main-article__copy">Every day is another and that's the way it goes. Every day is another and that's the way it goes. Every day is another and that's the way it goes. Every day is another and that's the way it goes. Every day is another and that's the way it goes.</p>
-            </div>
-        </section>
-     </main>
+    <main class="main w-full">
+      <section
+        class="main-article bg-gray-600 bg-[url(/images/desktop.jpg)] bg-cover px-6 pb-8 pt-30 bg-blend-darken lg:h-[45vh] lg:flex lg:items-end"
+      >
+        <div
+          class="main-article__text text-white lg:p-8 flex flex-col gap-2 lg:gap-4"
+        >
+          <time datetime="11-21-2025">Nov 21, 2025</time>
+          <a href="/main_article.html"
+            ><h2 class="main-article__title text-3xl font-bold">
+              Staring at my computer
+            </h2></a
+          >
+          <p class="main-article__copy max-w-[1000px]">
+            Every day is another and that's the way it goes. Every day is
+            another and that's the way it goes. Every day is another and that's
+            the way it goes. Every day is another and that's the way it goes.
+            Every day is another and that's the way it goes.
+          </p>
+        </div>
+      </section>
+    </main>
 
-     <!-- Articles -->
+    <!-- Articles -->
 
-     <aside class="articles flex flex-col items-center gap-y-6 p-6">
-       
+    <aside
+      class="articles relative flex flex-col items-center gap-y-6 p-6 lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:gap-x-4"
+    >
       <!-- Blog 1 -->
-       <article class="blog-one blog">
-        <img class="blog-img" src="images/apples.jpg" alt="apples">
+      <article class="blog flex">
+        <img class="blog-img" src="images/apples.jpg" alt="apples" />
         <div class="blog-text-container">
           <time datetime="07-23-2025">July 23, 2025</time>
           <h3 class="blog-title">Blog one</h3>
-          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde.</p>
-       </div>
-       </article>
+          <p class="blog-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure
+            velit aliquam illum unde.
+          </p>
+        </div>
+      </article>
 
-       <!-- Blog 2 -->
-      <article class="blog-two blog">
-        <img class="blog-img" src="images/bananas.jpg" alt="bananas">
+      <!-- Blog 2 -->
+      <article class="blog flex">
+        <img class="blog-img" src="images/bananas.jpg" alt="bananas" />
         <div class="blog-text-container">
           <time datetime="07-18-2025">July 18, 2025</time>
           <h3 class="blog-title">Blog two</h3>
-          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde.</p>
+          <p class="blog-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure
+            velit aliquam illum unde.
+          </p>
         </div>
       </article>
 
-       <!-- Blog 3 -->
-      <article class="blog-three blog">
-        <img class="blog-img" src="images/blueberries.jpg" alt="blueberries">
+      <!-- Blog 3 -->
+      <article class="blog flex">
+        <img class="blog-img" src="images/blueberries.jpg" alt="blueberries" />
         <div class="blog-text-container">
           <time datetime="07-23-2025">July 23, 2025</time>
-          <h3 class="blog-title">Blog one</h3>
-          <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure velit aliquam illum unde.</p>
+          <h3 class="blog-title">Blog three</h3>
+          <p class="blog-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure
+            velit aliquam illum unde.
+          </p>
         </div>
       </article>
 
+      <!-- Desktop Expanded Blog Cards -->
 
-     </aside>
+      <!-- Blog 4 -->
+      <article class="blog max-lg:hidden lg:flex">
+        <img class="blog-img" src="images/durian.jpg" alt="durian" />
+        <div class="blog-text-container">
+          <time datetime="06-23-2025">June 23, 2025</time>
+          <h3 class="blog-title">Blog four</h3>
+          <p class="blog-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure
+            velit aliquam illum unde.
+          </p>
+        </div>
+      </article>
 
-     <!-- Footer -->
-      <footer class="footer bg-gray-700 p-8 text-center">
-          <p class="footer-title text-white font-bold">my learning journal</p>
-          <p class="copyright text-white">Copyright &copy; 2025</p>
-      </footer>
-      <script>
-        const hamburger = document.querySelector(".hamburger");
-        const closeMenu = document.querySelector(".close-menu");
-        const mobileMenu = document.querySelector(".mobile__menu");
+      <!-- Blog 5 -->
+      <article class="blog max-lg:hidden lg:flex">
+        <img class="blog-img" src="images/grapes.jpg" alt="grapes" />
+        <div class="blog-text-container">
+          <time datetime="06-11-2025">June 11, 2025</time>
+          <h3 class="blog-title">Blog five</h3>
+          <p class="blog-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure
+            velit aliquam illum unde.
+          </p>
+        </div>
+      </article>
 
-        hamburger.addEventListener("click", () => {
-          mobileMenu.classList.remove("translate-full")
-        })
+      <!-- Blog 6 -->
+      <article class="blog max-lg:hidden lg:flex">
+        <img class="blog-img" src="images/oranges.jpg" alt="oranges" />
+        <div class="blog-text-container">
+          <time datetime="05-15-2025">May 15, 2025</time>
+          <h3 class="blog-title">Blog six</h3>
+          <p class="blog-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure
+            velit aliquam illum unde.
+          </p>
+        </div>
+      </article>
+    </aside>
 
-        closeMenu.addEventListener("click", () => {
-          mobileMenu.classList.add("translate-full")
-        })
+    <!-- View more blog posts -->
 
-      </script>
-</body>
+    <p class="view-more underline hover:cursor-pointer font-bold my-8">View more</p>
+
+    <!-- Hidden blog posts -->
+    <aside class="hidden-blogs hidden">
+
+
+
+    </aside>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-700 p-8 text-center w-full">
+      <p class="footer-title text-white font-bold">my learning journal</p>
+      <p class="copyright text-white">Copyright &copy; 2025</p>
+    </footer>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const closeMenu = document.querySelector(".close-menu");
+      const mobileMenu = document.querySelector(".mobile__menu");
+      const viewMore = document.querySelector(".view-more");
+      const hiddenBlogs = document.querySelector(".hidden-blogs");
+    
+
+      hamburger.addEventListener("click", () => {
+        mobileMenu.classList.remove("translate-full");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("translate-full");
+      });
+
+      viewMore.addEventListener("click", () => {
+        hiddenBlogs.classList.remove("hidden")
+      })
+    </script>
+  </body>
 </html>
