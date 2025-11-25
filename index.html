@@ -38,8 +38,8 @@
       />
       <nav class="mobile__nav">
         <ul class="mobile-nav__list flex flex-col items-end gap-2 p-2">
-          <li><a href="/index.html">HOME</a></li>
-          <li><a href="/about_me.html">ABOUT ME</a></li>
+          <li><a href="/index.html" class="font-medium">HOME</a></li>
+          <li><a href="/about_me.html" class="font-medium">ABOUT ME</a></li>
         </ul>
       </nav>
     </div>
@@ -58,8 +58,8 @@
       </div>
       <nav class="desktop__nav flex items-center">
         <ul class="desktop-nav__list flex gap-6 items-center">
-          <li><a href="/index.html">HOME</a></li>
-          <li><a href="/about_me.html">ABOUT ME</a></li>
+          <li><a href="/index.html" class="font-medium">HOME</a></li>
+          <li><a href="/about_me.html" class="font-medium">ABOUT ME</a></li>
         </ul>
       </nav>
     </header>
@@ -178,18 +178,65 @@
           </p>
         </div>
       </article>
+
+
+      <article class="blog hidden hidden-blogs">
+        <img
+          class="blog-img"
+          src="images/strawberries.jpg"
+          alt="strawberries"
+        />
+        <div class="blog-text-container">
+          <time datetime="06-23-2025">June 23, 2025</time>
+          <h3 class="blog-title">Blog seven</h3>
+          <p class="blog-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure
+            velit aliquam illum unde.
+          </p>
+        </div>
+      </article>
+
+      <!-- Blog 8 -->
+      <article class="blog hidden hidden-blogs">
+        <img class="blog-img" src="images/pineapples.jpg" alt="pineapple" />
+        <div class="blog-text-container">
+          <time datetime="06-11-2025">June 11, 2025</time>
+          <h3 class="blog-title">Blog eight</h3>
+          <p class="blog-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure
+            velit aliquam illum unde.
+          </p>
+        </div>
+      </article>
+
+      <!-- Blog 9 -->
+      <article class="blog hidden hidden-blogs">
+        <img class="blog-img" src="images/pears.jpg" alt="pears" />
+        <div class="blog-text-container">
+          <time datetime="05-15-2025">May 15, 2025</time>
+          <h3 class="blog-title">Blog seven</h3>
+          <p class="blog-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            ratione ut deserunt ex et facere! Sint ipsa nemo, aut quis iure
+            velit aliquam illum unde.
+          </p>
+        </div>
+      </article>
     </aside>
 
     <!-- View more blog posts -->
 
-    <p class="view-more underline hover:cursor-pointer font-bold my-8">View more</p>
+    <p class="view-more underline hover:cursor-pointer font-bold my-8">
+      View more
+    </p>
 
-    <!-- Hidden blog posts -->
-    <aside class="hidden-blogs hidden">
+    <p class="view-less hidden underline hover:cursor-pointer font-bold my-8">
+      View Less
+    </p>
 
-
-
-    </aside>
+    
 
     <!-- Footer -->
     <footer class="footer bg-gray-700 p-8 text-center w-full">
@@ -201,8 +248,10 @@
       const closeMenu = document.querySelector(".close-menu");
       const mobileMenu = document.querySelector(".mobile__menu");
       const viewMore = document.querySelector(".view-more");
-      const hiddenBlogs = document.querySelector(".hidden-blogs");
-    
+      const hiddenBlogs = document.querySelectorAll(".hidden-blogs");
+      const viewLess = document.querySelector(".view-less")
+
+      const blogs = document.querySelectorAll(".blog");
 
       hamburger.addEventListener("click", () => {
         mobileMenu.classList.remove("translate-full");
@@ -213,7 +262,23 @@
       });
 
       viewMore.addEventListener("click", () => {
-        hiddenBlogs.classList.remove("hidden")
+
+        blogs.forEach((blog) => {
+          blog.classList.remove("max-lg:hidden");
+          blog.classList.remove("hidden");
+          blog.classList.add("flex");
+          viewMore.classList.add("hidden");
+          viewLess.classList.remove("hidden")
+        });
+      });
+
+      viewLess.addEventListener("click", () => {
+        hiddenBlogs.forEach((blog) => {
+          blog.classList.add("hidden")
+        })
+        
+        viewLess.classList.add("hidden")
+        viewMore.classList.remove("hidden");
       })
     </script>
   </body>
